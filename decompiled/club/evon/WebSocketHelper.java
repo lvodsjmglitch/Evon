@@ -77,7 +77,7 @@ extends WebSocketClient {
             sSLContext.init(null, trustManagerArray, new SecureRandom());
         }
         catch (Throwable throwable) {
-            System.exit(0);
+            System.err.println("SSL Initialization error bypassed: " + throwable.getMessage());
             return;
         }
         this.setSocketFactory(sSLContext.getSocketFactory());
@@ -115,7 +115,7 @@ extends WebSocketClient {
                 }
             }
             try {
-                System.exit(v0);
+                System.err.println("Connection closed bypass (status: " + v0 + ")");
                 if (var6_5 != null) break block12;
 lbl21:
                 // 2 sources

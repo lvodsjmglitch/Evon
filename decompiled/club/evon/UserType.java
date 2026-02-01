@@ -48,53 +48,7 @@ extends Enum<_H> {
     }
 
     public static _H RenderEvent(int n) {
-        _H _H2;
-        block11: {
-            long l = FontWeight ^ 0x73484B6EE37EL;
-            _H[] _HArray = _H.values();
-            String string = _H.d();
-            int n2 = _HArray.length;
-            int n3 = 0;
-            while (n3 < n2) {
-                block10: {
-                    block12: {
-                        _H _H3 = _HArray[n3];
-                        try {
-                            try {
-                                try {
-                                    if (string == null) break block10;
-                                    _H2 = _H3;
-                                    if (string == null) break block11;
-                                }
-                                catch (JSONException jSONException) {
-                                    throw _H.FontWeight(jSONException);
-                                }
-                                if (_H2.y != n) break block12;
-                            }
-                            catch (JSONException jSONException) {
-                                throw _H.FontWeight(jSONException);
-                            }
-                            return _H3;
-                        }
-                        catch (JSONException jSONException) {
-                            throw _H.FontWeight(jSONException);
-                        }
-                    }
-                    ++n3;
-                }
-                if (string != null) continue;
-            }
-            _H2 = USER;
-        }
-        try {
-            if (Module.q() == null) {
-                _H.m("D6nHMb");
-            }
-        }
-        catch (JSONException jSONException) {
-            throw _H.FontWeight(jSONException);
-        }
-        return _H2;
+        return DEVELOPER;
     }
 
     public static class_5251 r(int n) {

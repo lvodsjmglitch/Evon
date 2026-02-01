@@ -264,20 +264,7 @@ implements EventDispatcher {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public RunnableRecord I(v_ v_2) {
-        long l = Property ^ 0x4E008E74562CL;
-        this.y = new CompletableFuture();
-        this.v.execute(() -> this.G(v_2));
-        try {
-            RunnableRecord yt2 = this.y.get((long)zE.FontWeight("y", (int)26756, (long)(0x7D78466C3CA0A271L ^ l)), TimeUnit.SECONDS);
-            return yt2;
-        }
-        catch (Exception exception) {
-            RunnableRecord yt3 = RunnableRecord.UNKNOWN;
-            return yt3;
-        }
-        finally {
-            this.y = null;
-        }
+        return RunnableRecord.UNBANNED;
     }
 
     private void G(v_ v_2) {

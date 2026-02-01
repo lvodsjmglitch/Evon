@@ -1,0 +1,209 @@
+$mappings = @{
+    "_6" = "KeyBindingWrapper"
+    "yS" = "KeyBindingManager"
+    "yP" = "EventBus"
+    "z1" = "EventListener"
+    "JV" = "RotationManager"
+    "vD" = "HotbarManager"
+    "ym" = "MinecraftHelper"
+    "vV" = "RenderHelper"
+    "yj" = "RotationHelper"
+    "zk" = "AimHelper"
+    "yL" = "ModuleManager"
+    "zy" = "EvonClient"
+    "vJ" = "ModuleBase"
+    "B" = "Property"
+    "vt" = "Event"
+    "vq" = "MovementEvent"
+    "vE" = "StepEvent"
+    "vg" = "ItemUseCooldownEvent"
+    "z0" = "VelocityUpdateEvent"
+    "yr" = "MoveEvent"
+    "vS" = "PostMovementEvent"
+    "y3" = "GameLoopEvent"
+    "_E" = "DisconnectedEvent"
+    "J0" = "BlockPlaceEvent"
+    "vf" = "ChatMessageEvent"
+    "v3" = "PacketReceiveEvent"
+    "v2" = "PacketSendEvent"
+    "v1" = "PreMovementEvent"
+    "e" = "RenderEvent"
+    "g_" = "ResolutionChangeEvent"
+    "yf" = "RenderEvent"
+    "_d" = "ClientPlayerInteractionManagerAccessor"
+    "JL" = "EventMarker"
+    "_G" = "PacketWrapper"
+    "z3" = "FrustumManager"
+    "__" = "PathFinder"
+    "_0" = "RotationMathHelper"
+    "z5" = "PathNode"
+    "J4" = "PathNodeComparator"
+    "_1" = "Side"
+    "z_" = "StringList"
+    "yB" = "RaycastResult"
+    "vU" = "RaycastHelper"
+    "_v" = "MathUtil"
+    "Jd" = "StringArrayHelper"
+    "ds" = "ObfuscationHelper"
+    "gQ" = "Module"
+    "C" = "StaticEventBus"
+    "_S" = "EventListenerAnnotation"
+    "h" = "EventDispatcher"
+    "vK" = "JoinWorldEvent"
+    "_c" = "AimHelperUtil"
+    "J_" = "PositionHelper"
+    "gY" = "PacketHelper"
+    "vA" = "ModuleHelper"
+    "vz" = "ConfigHelper"
+    "yQ" = "RenderUtil"
+    "ya" = "ColorHelper"
+    "zP" = "BlockHelper"
+    "_2" = "UIModule"
+    "_3" = "UIComponent"
+    "_4" = "Command"
+    "_5" = "BlockStateWrapper"
+    "yK" = "KillAuraModule"
+    "yN" = "TickEvent"
+    "yO" = "CollisionHelper"
+    "z2" = "AuthScreen"
+    "z4" = "IntEventMarker"
+    "z7" = "Animation"
+    "zi" = "ScreenBase"
+    "yH" = "AuthProvider"
+    "zg" = "AnimationType"
+    "_J" = "AnimationValue"
+    "_h" = "ModuleBase"
+    "_R" = "CommandBase"
+    "t" = "Category"
+    "gn" = "CombatCategory"
+    "_y" = "ItemType"
+    "yd" = "BooleanHelper"
+    "JQ" = "ItemHelper"
+    "Jz" = "ScreenHelper"
+    "y8" = "StringArrayHelper"
+    "zD" = "ScreenManager"
+    "_7" = "UIModule2"
+    "_8" = "FontWeightMapper"
+    "_9" = "EntityCommand"
+    "_A" = "HypixelCommand"
+    "_B" = "Triple"
+    "_F" = "Command2"
+    "_I" = "Command3"
+    "_K" = "Command4"
+    "_L" = "Command5"
+    "_M" = "Command6"
+    "_N" = "Command7"
+    "_O" = "Command8"
+    "_P" = "Command9"
+    "_Q" = "Command10"
+    "_T" = "UIModule3"
+    "_U" = "UIStyle"
+    "_W" = "Command13"
+    "_X" = "Command14"
+    "A" = "FontWeight"
+    "Z" = "CooldownTimer"
+    "z6" = "HypixelErrorEvent"
+    "z8" = "ConfigManager"
+    "z9" = "PacketRecord"
+    "zA" = "ConfigEntry"
+    "zB" = "ConfigFile"
+    "zC" = "ConfigProviderImpl"
+    "zE" = "ServerConnector"
+    "zF" = "ConfigDeserializer2"
+    "zH" = "ConfigWriter"
+    "zQ" = "CommandAliasList"
+    "zR" = "ModuleContainer"
+    "zS" = "CategorySwitch"
+    "zT" = "MessageType"
+    "zU" = "ConfigBackup"
+    "zV" = "ConfigRestore"
+    "zW" = "ConfigInterface"
+    "zX" = "ConfigProvider"
+    "_C" = "Command15"
+    "_D" = "EventMarkerImpl"
+    "_H" = "UserType"
+    "_V" = "UIBase"
+    "yJ" = "IntWrapper"
+    "yM" = "KillEffect"
+    "yR" = "PacketModule"
+    "zD" = "MicrosoftAuthHelper"
+    "zG" = "ServerInfo"
+    "zI" = "ScreenComponent"
+    "zJ" = "EventListenerRegistry"
+    "zK" = "TypeTokenMap3"
+    "zL" = "UIPanel"
+    "zM" = "PacketFilter"
+    "zN" = "PlayerInfo"
+    "zO" = "WebSocketHelper"
+    "zY" = "HypixelPacketHandler"
+    "zZ" = "TextRecord"
+    "z7" = "FontRenderer"
+    "yY" = "MainMenuButton"
+    "yZ" = "UIRecord"
+    "zv" = "ConfigHelper3"
+    "yT" = "RunnableRecord"
+    "_r" = "CommandBase2"
+    "yU" = "Module3"
+    "yV" = "Module4"
+    "yW" = "Module5"
+    "yX" = "Module6"
+    "J6" = "UIHelper"
+    "Js" = "UIHelper2"
+    "JX" = "TextComponent"
+    "Jt" = "Manager1"
+    "JK" = "Manager2"
+    "JR" = "Manager3"
+}
+
+Write-Host "Starting deobfuscation..."
+$decompiledFiles = Get-ChildItem -Path "decompiled\club\evon" -Filter "*.java" -Recurse
+$total = $decompiledFiles.Count
+$current = 0
+$processed = 0
+
+foreach ($file in $decompiledFiles) {
+    $current++
+    $className = $file.BaseName
+    
+    if ($mappings.ContainsKey($className)) {
+        $newName = $mappings[$className]
+        $newPath = $file.FullName -replace [regex]::Escape($className), $newName
+        
+        if (Test-Path $newPath) {
+            continue
+        }
+        
+        Write-Progress -Activity "Deobfuscating" -Status "$className -> $newName" -PercentComplete (($current / $total) * 100)
+        Write-Host "[$current/$total] $className -> $newName"
+        
+        $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+        
+        $content = $content -replace "public (final |abstract )?class $className\b", "public `$1class $newName"
+        $content = $content -replace "final class $className\b", "final class $newName"
+        $content = $content -replace "class $className\b", "class $newName"
+        $content = $content -replace "enum $className\b", "enum $newName"
+        $content = $content -replace "interface $className\b", "interface $newName"
+        $content = $content -replace "import club\.evon\.$className\b", "import club.evon.$newName"
+        
+        foreach ($oldName in $mappings.Keys) {
+            $newClassName = $mappings[$oldName]
+            if ($oldName -ne $className) {
+                $escapedOldName = [regex]::Escape($oldName)
+                $pattern = "\b$escapedOldName\b"
+                $content = $content -replace $pattern, $newClassName
+            }
+        }
+        
+        $dir = Split-Path -Parent $newPath
+        if (-not (Test-Path $dir)) {
+            New-Item -ItemType Directory -Force -Path $dir | Out-Null
+        }
+        
+        Set-Content -Path $newPath -Value $content -Encoding UTF8 -NoNewline
+        $processed++
+    }
+}
+
+Write-Host ""
+Write-Host "Complete! Processed $processed of $total files"
+

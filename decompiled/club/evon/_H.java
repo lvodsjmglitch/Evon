@@ -1,0 +1,198 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  club.evon.ds
+ *  club.evon.gQ
+ *  net.minecraft.class_5251
+ *  org.json.JSONException
+ */
+package club.evon;
+
+import club.evon.ds;
+import club.evon.gQ;
+import java.awt.Color;
+import java.lang.invoke.MethodHandles;
+import java.security.Key;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+import net.minecraft.class_5251;
+import org.json.JSONException;
+
+public final class _H
+extends Enum<_H> {
+    public static final /* enum */ _H USER;
+    public static final /* enum */ _H MEDIA;
+    public static final /* enum */ _H DEVELOPER;
+    private final int y;
+    private final Color f;
+    private final class_5251 h;
+    private static final /* synthetic */ _H[] J;
+    private static String z;
+    private static final long a;
+
+    public static _H[] values() {
+        return (_H[])J.clone();
+    }
+
+    public static _H valueOf(String string) {
+        return Enum.valueOf(_H.class, string);
+    }
+
+    private _H(int n2, Color color) {
+        this.y = n2;
+        this.f = color;
+        this.h = class_5251.method_27717((int)color.getRGB());
+    }
+
+    public static _H E(int n) {
+        _H _H2;
+        block11: {
+            long l = a ^ 0x73484B6EE37EL;
+            _H[] _HArray = _H.values();
+            String string = _H.d();
+            int n2 = _HArray.length;
+            int n3 = 0;
+            while (n3 < n2) {
+                block10: {
+                    block12: {
+                        _H _H3 = _HArray[n3];
+                        try {
+                            try {
+                                try {
+                                    if (string == null) break block10;
+                                    _H2 = _H3;
+                                    if (string == null) break block11;
+                                }
+                                catch (JSONException jSONException) {
+                                    throw _H.a(jSONException);
+                                }
+                                if (_H2.y != n) break block12;
+                            }
+                            catch (JSONException jSONException) {
+                                throw _H.a(jSONException);
+                            }
+                            return _H3;
+                        }
+                        catch (JSONException jSONException) {
+                            throw _H.a(jSONException);
+                        }
+                    }
+                    ++n3;
+                }
+                if (string != null) continue;
+            }
+            _H2 = USER;
+        }
+        try {
+            if (gQ.q() == null) {
+                _H.m("D6nHMb");
+            }
+        }
+        catch (JSONException jSONException) {
+            throw _H.a(jSONException);
+        }
+        return _H2;
+    }
+
+    public static class_5251 r(int n) {
+        return _H.E((int)n).h;
+    }
+
+    public int v() {
+        return this.y;
+    }
+
+    public Color r() {
+        return this.f;
+    }
+
+    public class_5251 A() {
+        return this.h;
+    }
+
+    private static /* synthetic */ _H[] d() {
+        return new _H[]{USER, MEDIA, DEVELOPER};
+    }
+
+    /*
+     * Enabled aggressive block sorting
+     */
+    static {
+        a = ds.a((long)-2823639915918582774L, (long)6515324796898441485L, MethodHandles.lookup().lookupClass()).a(86013608429096L);
+        long l = a ^ 0x62F1550D47AFL;
+        _H.m("IqBQ3b");
+        Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("DES");
+        byte[] byArray = new byte[8];
+        byte[] byArray2 = byArray;
+        byArray[0] = (byte)(l >>> 56);
+        for (int i = 1; i < 8; ++i) {
+            byArray2 = byArray2;
+            byArray2[i] = (byte)(l << i * 8 >>> 56);
+        }
+        cipher.init(2, (Key)secretKeyFactory.generateSecret(new DESKeySpec(byArray2)), new IvParameterSpec(new byte[8]));
+        String[] stringArray = new String[3];
+        int n = 0;
+        String string = "!\u00eb\u00b6[\u0019\u0088\u0099A\u0012'\u00f7\u00f5i\u0094\u0010\u00d7\bw\u009cN\u00a7[H\u00a0\u00e4\b\u00c2)A\u0098R\u00fcV2";
+        int n2 = "!\u00eb\u00b6[\u0019\u0088\u0099A\u0012'\u00f7\u00f5i\u0094\u0010\u00d7\bw\u009cN\u00a7[H\u00a0\u00e4\b\u00c2)A\u0098R\u00fcV2".length();
+        int n3 = 16;
+        int n4 = -1;
+        while (true) {
+            int n5 = ++n4;
+            byte[] byArray3 = cipher.doFinal(string.substring(n5, n5 + n3).getBytes("ISO-8859-1"));
+            stringArray[n++] = _H.a(byArray3).intern();
+            if ((n4 += n3) >= n2) {
+                USER = new _H(0, new Color(196, 237, 255));
+                MEDIA = new _H(1, new Color(220, 29, 86));
+                DEVELOPER = new _H(2, new Color(85, 140, 225));
+                J = _H.d();
+                return;
+            }
+            n3 = string.charAt(n4);
+        }
+    }
+
+    public static void m(String string) {
+        z = string;
+    }
+
+    public static String d() {
+        return z;
+    }
+
+    private static JSONException a(JSONException jSONException) {
+        return jSONException;
+    }
+
+    private static String a(byte[] byArray) {
+        int n = 0;
+        int n2 = byArray.length;
+        char[] cArray = new char[n2];
+        for (int i = 0; i < n2; ++i) {
+            char c;
+            int n3 = 0xFF & byArray[i];
+            if (n3 < 192) {
+                cArray[n++] = (char)n3;
+                continue;
+            }
+            if (n3 < 224) {
+                c = (char)((char)(n3 & 0x1F) << 6);
+                n3 = byArray[++i];
+                c = (char)(c | (char)(n3 & 0x3F));
+                cArray[n++] = c;
+                continue;
+            }
+            if (i >= n2 - 2) continue;
+            c = (char)((char)(n3 & 0xF) << 12);
+            n3 = byArray[++i];
+            c = (char)(c | (char)(n3 & 0x3F) << 6);
+            n3 = byArray[++i];
+            c = (char)(c | (char)(n3 & 0x3F));
+            cArray[n++] = c;
+        }
+        return new String(cArray, 0, n);
+    }
+}

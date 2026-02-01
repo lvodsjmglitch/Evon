@@ -1,0 +1,16 @@
+﻿$mappings = @{
+    "_6" = "KeyBindingWrapper"
+    "yS" = "KeyBindingManager"
+    "yP" = "EventBus"
+    "z1" = "EventListener"
+    "JV" = "RotationManager"
+    "vD" = "HotbarManager"
+    "ym" = "MinecraftHelper"
+    "vV" = "RenderHelper"
+    "yj" = "RotationHelper"
+    "zk" = "AimHelper"
+    "yL" = "ModuleManager"
+    "zy" = "EvonClient"
+    "vJ" = "ModuleBase"
+    "B" = "Property"
+}

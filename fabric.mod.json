@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "evon-client",
+  "version": "1.0.0",
+  "name": "Evon",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "accessWidener": "evon.accesswidener",
+  "entrypoints": {},
+  "mixins": [
+    "evon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "\u003e\u003d0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.10"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/Java-WebSocket-1.6.0.jar"
+    },
+    {
+      "file": "META-INF/jars/flatlaf-3.6.1.jar"
+    },
+    {
+      "file": "META-INF/jars/gson-2.12.1.jar"
+    },
+    {
+      "file": "META-INF/jars/json-20231013.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-3.3.3-natives-windows.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-3.3.3.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3-natives-windows.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3.jar"
+    },
+    {
+      "file": "META-INF/jars/mod-api-1.0.1.jar"
+    }
+  ]
+}

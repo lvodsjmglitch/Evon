@@ -1,0 +1,106 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  club.evon.ds
+ *  org.json.JSONException
+ */
+package club.evon;
+
+import club.evon._v;
+import club.evon.ds;
+import java.lang.invoke.MethodHandles;
+import org.json.JSONException;
+
+public final class Z {
+    private long b = System.currentTimeMillis();
+    private static final long a = ds.a((long)6974182748901140546L, (long)-7136418505392342784L, MethodHandles.lookup().lookupClass()).a(195992737726736L);
+
+    public boolean Z(long l, boolean bl) {
+        boolean bl2;
+        block8: {
+            boolean bl3;
+            block9: {
+                long l2 = a ^ 0x67A641A65931L;
+                bl3 = this.o(l);
+                int[] nArray = _v.Y();
+                try {
+                    try {
+                        try {
+                            try {
+                                bl2 = bl3;
+                                if (nArray != null) break block8;
+                                if (!bl2) break block9;
+                            }
+                            catch (JSONException jSONException) {
+                                throw Z.a(jSONException);
+                            }
+                            bl2 = bl;
+                            if (nArray != null) break block8;
+                        }
+                        catch (JSONException jSONException) {
+                            throw Z.a(jSONException);
+                        }
+                        if (!bl2) break block9;
+                    }
+                    catch (JSONException jSONException) {
+                        throw Z.a(jSONException);
+                    }
+                    this.a();
+                }
+                catch (JSONException jSONException) {
+                    throw Z.a(jSONException);
+                }
+            }
+            bl2 = bl3;
+        }
+        return bl2;
+    }
+
+    public boolean o(long l) {
+        long l2;
+        block2: {
+            block3: {
+                long l3 = a ^ 0x6954D1A45ECAL;
+                int[] nArray = _v.Y();
+                try {
+                    long l4 = this.D() - l;
+                    l2 = l4 == 0L ? 0 : (l4 < 0L ? -1 : 1);
+                    if (nArray != null) break block2;
+                    if (l2 < 0) break block3;
+                }
+                catch (JSONException jSONException) {
+                    throw Z.a(jSONException);
+                }
+                l2 = 1;
+                break block2;
+            }
+            l2 = 0;
+        }
+        return (boolean)l2;
+    }
+
+    public long D() {
+        return System.currentTimeMillis() - this.b;
+    }
+
+    public void a() {
+        this.b = System.currentTimeMillis();
+    }
+
+    public void O(long l) {
+        this.b -= l;
+    }
+
+    public long m() {
+        return this.b;
+    }
+
+    public void h(long l) {
+        this.b = l;
+    }
+
+    private static JSONException a(JSONException jSONException) {
+        return jSONException;
+    }
+}
